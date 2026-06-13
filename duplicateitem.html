@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    #cart { margin-top: 20px; }
+    .cart-item { padding: 5px; border-bottom: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h1>Shopping Cart</h1>
+  <button onclick="addToCart({id:1, name:'Tent'})">Add Tent</button>
+  <button onclick="addToCart({id:2, name:'Sleeping Bag'})">Add Sleeping Bag</button>
+  <button onclick="addToCart({id:1, name:'Tent'})">Add Tent Again</button>
+
+  <div id="cart"></div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(item) {
+      const existingItem = cart.find(cartItem => cartItem.id === item.id);
+
+      if (existingItem) {
+        existingItem.quantity += 1;
+      } else {
+        cart.push({ ...item, quantity: 1 });
+      }
+
+      renderCart();
+    }
+
+    function renderCart() {
+      const cartDiv = document.getElementById('cart');
+      cartDiv.innerHTML = '<h2>Cart Items</h2>';
+      cart.forEach(item => {
+        cartDiv.innerHTML += `<div class="cart-item">${item.name} - Quantity: ${item.quantity}</div>`;
+      });
+    }
+  </script>
+</body>
+</html>
