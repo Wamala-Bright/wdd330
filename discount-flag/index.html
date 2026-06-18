@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Product detail page with discount flag" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Detail</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <main class="product-container">
+    <div class="product-card">
+
+      <!-- Discount Flag -->
+      <span id="discount-flag" class="discount-flag hidden"></span>
+
+      <img src="https://via.placeholder.com/300" alt="Product image" />
+
+      <h1 id="product-name"></h1>
+
+      <p class="price">
+        <span id="original-price" class="original-price"></span>
+        <span id="discounted-price" class="discounted-price"></span>
+        <p id="countdown" class="countdown"></p>
+      </p>
+
+      <p id="product-description"></p>
+    </div>
+  </main>
+
+  <script type="module" src="js/product.js"></script>
+</body>
+</html>
