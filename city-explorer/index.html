@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>City Explorer | Weather & City Info</title>
+  <meta name="description" content="Explore cities with real-time weather and city information." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+  <header>
+    <h1>City Explorer</h1>
+  </header>
+
+  <main>
+    <section id="search">
+      <label for="cityInput">Search for a city</label>
+      <input id="cityInput" type="text" placeholder="Enter city name" />
+      <button id="searchBtn">Search</button>
+    </section>
+
+    <section id="results">
+      <div id="image"></div>
+      <div id="weather"></div>
+      <div id="city"></div>
+    </section>
+
+    <p id="error" role="alert"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 City Explorer</p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
